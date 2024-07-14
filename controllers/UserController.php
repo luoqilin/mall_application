@@ -5,11 +5,17 @@ namespace app\controllers;
 use app\base\BaseController;
 use app\forms\UserForm;
 use Yii;
+use yii\web\Response;
 
 class UserController extends BaseController
 {
 
-    public function actionDelete()
+    /**
+     * 删除用户
+     * @api
+     * @return Response
+     */
+    public function actionDelete(): Response
     {
         if (Yii::$app->request->isDelete) {
             $model = new UserForm();
@@ -24,7 +30,12 @@ class UserController extends BaseController
         ]);
     }
 
-    public function actionList()
+    /**
+     * 用户列表
+     * @api
+     * @return Response
+     */
+    public function actionList(): Response
     {
         if (Yii::$app->request->isGet) {
             $pagination = Yii::$app->request->post();

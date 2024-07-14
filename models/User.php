@@ -12,7 +12,7 @@ use yii\web\IdentityInterface;
  * @property string $nick_name
  * @property string $password
  * @property string $mobile
- * @property string|null $access_token
+ * @property string $access_token
  * @property string $email
  * @property integer $status
  * @property boolean $is_deleted

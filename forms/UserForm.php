@@ -2,12 +2,11 @@
 
 namespace app\forms;
 
-use app\base\BaseModel;
+use app\base\BaseForm;
 use app\models\User;
-use yii\data\Pagination;
 
 
-class UserForm extends BaseModel
+class UserForm extends BaseForm
 {
     public int $id;
 

@@ -7,6 +7,11 @@ use Exception;
 use Yii;
 use yii\db\ActiveRecord;
 
+/**
+ * 模型基类
+ * 重写了删除方法，删除数据将更改为将is_deleted设置为0（false）
+ * 重写保存方法，更新时自动增加更新人和更新时间，新增数据自动增加创建人和创建时间
+ */
 class BaseActiveRecord extends ActiveRecord
 {
     public function delete(): bool

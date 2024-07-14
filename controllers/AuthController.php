@@ -16,7 +16,9 @@ class AuthController extends Controller
             return $this->asJson($model->login());
         } else {
             return $this->asJson([
-
+                'success' => false,
+                'code' => 401,
+                'message' => '操作失败'
             ]);
         }
     }

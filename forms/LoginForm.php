@@ -2,7 +2,7 @@
 
 namespace app\forms;
 
-use app\base\BaseModel;
+use app\base\BaseForm;
 use app\models\User;
 use Yii;
 
@@ -12,7 +12,7 @@ use Yii;
  * @property-read User|null $user
  *
  */
-class LoginForm extends BaseModel
+class LoginForm extends BaseForm
 {
     public string $username;
     public string $password;
